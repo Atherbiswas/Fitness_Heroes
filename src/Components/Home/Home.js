@@ -1,16 +1,17 @@
 import React from 'react';
+import Activity from '../Activity/Activity';
 import Tools from '../Gym-tools/Tools';
 import Header from '../Header/Header';
 
 const Home = () => {
     return (
-        <div className='row'>
+        <div className='row g-5'>
             <div className='col-md-8 col-sm-12'>
                 <Header></Header>
                 <Tools></Tools>
             </div>
-            <div className='col-md-4 col-sm-12'>
-                <h1>this is right side</h1>
+            <div className='col-md-4 col-sm-12 bg-light shadow'>
+                <Activity></Activity>
             </div>
         </div>
     );

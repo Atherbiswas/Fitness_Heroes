@@ -1,0 +1,15 @@
+.man-detail {
+    background-color:lavender;
+    border-radius: 15px;
+}
+.activity-img {
+    width: 70px;
+    border-radius: 60%;
+}
+.title {
+    font-size: 14px;
+    font-weight: 300;
+}
+.break-time {
+    background-color: #ffff;
+}
