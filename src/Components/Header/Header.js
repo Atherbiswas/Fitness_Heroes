@@ -10,8 +10,7 @@ const Header = () => {
          <h2 className='d-inline ms-2 text-uppercase fw-bold text-primary'>Fitness Heroes</h2>
          </section>
          <section className='mt-5'>
-            <h3>Select today's exercise</h3>
-
+            <h3>Select today's exercise:</h3>
          </section>
         </div>
     );
