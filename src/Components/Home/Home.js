@@ -2,6 +2,7 @@ import React from 'react';
 import Activity from '../Activity/Activity';
 import Tools from '../Gym-tools/Tools';
 import Header from '../Header/Header';
+import './Home.css'
 
 const Home = () => {
     return (

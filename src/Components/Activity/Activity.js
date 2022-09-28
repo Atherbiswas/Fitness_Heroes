@@ -1,6 +1,7 @@
 import React from 'react';
 import './Activity.css';
 import logo from '../../body-builder.png';
+import Exercise from '../Exercise-details/Exercise';
 
 const Activity = () => {
     return (
@@ -39,6 +40,10 @@ const Activity = () => {
             <div><button className='border border-0 rounded-circle break-time'>40s</button></div>
             <div><button className='border border-0 rounded-circle break-time'>50s</button></div>
            </div>
+           </section>
+           <br /><br />
+           <section className='mt-4'>
+            <Exercise></Exercise>
            </section>
         </div>
     );
