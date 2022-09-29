@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Activity.css';
 import logo from '../../body-builder.png';
-import Exercise from '../Exercise-details/Exercise';
 
+const timeArry = [10, 20, 30, 40, 50];
 
 const Activity = (props) => {
     const {exerciseTime} = props;
@@ -10,6 +10,12 @@ const Activity = (props) => {
     for(const tool of exerciseTime){
         totalTime = totalTime + tool.time;
     }
+
+    const [breakTime, setBreakTime] = useState('0');
+    const handleClick = (time) => {
+        setBreakTime(time);
+    }
+    
     return (
         <div className='mt-3 activity-section'>
            <section>
@@ -40,11 +46,13 @@ const Activity = (props) => {
            <section className='mt-4'>
             <h4>Add a Break</h4>
            <div className="d-flex justify-content-evenly p-2 man-detail">
-            <div><button className='border border-0 rounded-circle break-time'>10s</button></div>
-            <div><button className='border border-0 rounded-circle break-time'>20s</button></div>
-            <div><button className='border border-0 rounded-circle break-time'>30s</button></div>
-            <div><button className='border border-0 rounded-circle break-time'>40s</button></div>
-            <div><button className='border border-0 rounded-circle break-time'>50s</button></div>
+
+            <div>
+                {
+                    timeArry.map(time => <button key={time} onClick={() => handleClick(time)} className='border border-0 rounded-circle break-time'>{time}</button>)
+                }
+                
+            </div>
            </div>
            </section>
            <br /><br />
@@ -59,7 +67,7 @@ const Activity = (props) => {
             </div>
             <div className="d-flex justify-content-between exercise-time mt-4">
                 <div><h5>Break time</h5></div>
-                <div><h5>000</h5></div>
+                <div><h5>{breakTime} sec</h5></div>
             </div>
             </section>
             <section className='mt-5'>
