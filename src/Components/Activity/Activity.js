@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Activity.css';
 import logo from '../../body-builder.png';
 
-const timeArry = [10, 20, 30, 40, 50];
+const timeArr = [10, 20, 30, 40, 50];
 
 const Activity = (props) => {
     const {exerciseTime} = props;
@@ -12,7 +12,7 @@ const Activity = (props) => {
     let totalTime = 0;
     for(const tool of exerciseTime){
         totalTime = totalTime + tool.time;
-        localStorage.setItem('exerciseTime', totalTime);
+        // localStorage.setItem('exerciseTime', totalTime);
     }
     //Break time part
     const [breakTime, setBreakTime] = useState('0');
@@ -20,7 +20,7 @@ const Activity = (props) => {
         setBreakTime(time);
     }
     
-    const getExerciseTime=  localStorage.getItem('exerciseTime');
+    // const getExerciseTime=  localStorage.getItem('exerciseTime');
 
     //toast added part
 
@@ -60,7 +60,7 @@ const Activity = (props) => {
            <div className="d-flex justify-content-evenly p-2 man-detail">
             <div>
                 {
-                    timeArry.map(time => <button key={time} onClick={() => handleClick(time)} className='border border-0 rounded-circle break-time'>{time}s</button>)
+                    timeArr.map(time => <button key={time} onClick={() => handleClick(time)} className='border border-0 rounded-circle break-time'>{time}s</button>)
                 }
             </div>
            </div>
