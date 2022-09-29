@@ -7,7 +7,7 @@ const Header = () => {
         <div className='mt-5'> 
          <section>
          <img src={logo} alt="" className='header-img'/>
-         <h2 className='d-inline ms-2 text-uppercase fw-bold text-primary'>Fitness Heroes</h2>
+         <h2 className='d-inline ms-2 text-uppercase fw-bold text-primary title-space'>Fitness Heroes</h2>
          </section>
          <section className='mt-5'>
             <h3>Select today's exercise:</h3>

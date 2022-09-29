@@ -4,6 +4,7 @@ import '../Tool/Tool.css'
 import './Home.css'
 import Tool from '../Tool/Tool';
 import Activity from '../Activity/Activity';
+import Answer from '../Answer/Answer';
 
 const Home = () => {
     const [tools, setTools] = useState([]);
@@ -32,6 +33,7 @@ const Home = () => {
                     handleAddToExercise = {handleAddToExercise}></Tool>)
             }
         </div>
+            <Answer></Answer>
             </div>
             <div className='col-md-4 col-sm-12 bg-light shadow activity-section'>
               <Activity exerciseTime = {exerciseTime}></Activity> 

@@ -31,15 +31,15 @@ const Activity = (props) => {
             {/* profile man details  */}
            <div className="d-flex justify-content-evenly">
             <div>
-                <h4>75 <span className='title'>kg</span></h4>
+                <h4>65 <span className='title'>kg</span></h4>
                 <p>Weight</p>
             </div>
             <div>
-                <h3>6.5 <span className='title'>Feet</span></h3>
+                <h3>5.8 <span className='title'>Feet</span></h3>
                 <p>Height</p>
             </div>
             <div>
-                <h3>25 <span className='title'>years</span></h3>
+                <h3>27 <span className='title'>years</span></h3>
                 <p>Age</p>
             </div>
            </div>
@@ -48,12 +48,10 @@ const Activity = (props) => {
             {/* added break time  */}
             <h4>Add a Break</h4>
            <div className="d-flex justify-content-evenly p-2 man-detail">
-
             <div>
                 {
-                    timeArry.map(time => <button key={time} onClick={() => handleClick(time)} className='border border-0 rounded-circle break-time'>{time}</button>)
+                    timeArry.map(time => <button key={time} onClick={() => handleClick(time)} className='border border-0 rounded-circle break-time'>{time}s</button>)
                 }
-                
             </div>
            </div>
            </section>

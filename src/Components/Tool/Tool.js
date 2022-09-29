@@ -3,7 +3,6 @@ import './Tool.css'
 
 const Tool = (props) => {
     const {title, detail, image, age, time} = props.tool;
-    
     return (
             <div className='col'>
                 <div className='card border border-0 shadow h-100'>
