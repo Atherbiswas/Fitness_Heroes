@@ -3,6 +3,7 @@ import './Tool.css'
 
 const Tool = (props) => {
     const {title, detail, image, age, time} = props.tool;
+    
     return (
             <div className='col'>
                 <div className='card border border-0 shadow h-100'>
@@ -12,7 +13,7 @@ const Tool = (props) => {
                     <p className="card-text text-muted">{detail}</p>
                     <p className='fw-semibold'>For Age: {age}</p>
                     <p className='fw-semibold'>Time Required: {time}s</p>
-                    <button className='w-100 bg-info border border-0 p-2 rounded-1 text-white fw-bolder'>Add to list</button>
+                    <button onClick={() => props.handleAddToExercise(props.tool)} className='w-100 bg-info border border-0 p-2 rounded-1 text-white fw-bolder'>Add to list</button>
                 </div>
                 </div>
             </div>
