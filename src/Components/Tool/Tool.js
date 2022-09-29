@@ -4,6 +4,7 @@ import './Tool.css'
 const Tool = (props) => {
     const {title, detail, image, age, time} = props.tool;
     return (
+        // each tool part 
             <div className='col'>
                 <div className='card border border-0 shadow h-100'>
                 <img src={image} className='card-img-top' alt=""/>

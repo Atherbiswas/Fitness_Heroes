@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Activity.css';
 import logo from '../../body-builder.png';
 
@@ -6,15 +8,23 @@ const timeArry = [10, 20, 30, 40, 50];
 
 const Activity = (props) => {
     const {exerciseTime} = props;
+    //total exercise part
     let totalTime = 0;
     for(const tool of exerciseTime){
         totalTime = totalTime + tool.time;
+        localStorage.setItem('exerciseTime', totalTime);
     }
-
+    //Break time part
     const [breakTime, setBreakTime] = useState('0');
     const handleClick = (time) => {
         setBreakTime(time);
     }
+    
+    const getExerciseTime=  localStorage.getItem('exerciseTime');
+
+    //toast added part
+
+    const notify = () => toast("Activity Completed Successfully !");
     
     return (
         <div className='mt-3 activity-section'>
@@ -70,8 +80,10 @@ const Activity = (props) => {
                 <div><h5>{breakTime} sec</h5></div>
             </div>
             </section>
+            {/* actively button part */}
             <section className='mt-5'>
-                <button className='border border-0 bg-info p-2 w-100 text-white fw-bolder fs-5 rounded'>Activity Completed</button>
+                <button onClick={notify} className='border border-0 bg-info p-2 w-100 text-white fw-bolder fs-5 rounded'>Activity Completed</button>
+                <ToastContainer />
             </section>
         </div>
            </section>
