@@ -1,5 +1,5 @@
 .activity-section {
-    max-height: 166vh;
+    /* max-height: 166vh; */
     position: sticky;
-    top: 0;
+    top: 0px;
 }

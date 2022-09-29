@@ -3,7 +3,7 @@ import './Answer.css'
 
 const Answer = () => {
     return (
-        <div>
+        <div className=' mt-5'>
             <section className='container mt-4 shadow rounded'>
                 <h3 className='text-muted'>How does react work?</h3>
                 <p className='fw-semibold'>ReactJS divides the UI into isolated reusable pieces of code known as components. React components work similarly to JavaScript functions as they accept arbitrary inputs called properties or props. It's possible to have as many components as necessary without cluttering your code</p>

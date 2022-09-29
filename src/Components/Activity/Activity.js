@@ -82,7 +82,7 @@ const Activity = (props) => {
             </section>
             {/* actively button part */}
             <section className='mt-5'>
-                <button onClick={notify} className='border border-0 bg-info p-2 w-100 text-white fw-bolder fs-5 rounded'>Activity Completed</button>
+                <button onClick={notify} className='border border-0 bg-info p-2 w-100 text-white fw-bolder fs-5 rounded mb-2'>Activity Completed</button>
                 <ToastContainer />
             </section>
         </div>
