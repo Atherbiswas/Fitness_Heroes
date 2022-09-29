@@ -8,12 +8,13 @@ import Activity from '../Activity/Activity';
 const Home = () => {
     const [tools, setTools] = useState([]);
     const [exerciseTime, setExerciseTime] = useState([]);
+    // data loaded and display UI
     useEffect( () => {
         fetch('gymtools.json')
         .then(res => res.json())
         .then(data => setTools(data))
     },[]);
-
+    // added to do list button
     const handleAddToExercise = (tool) => {
         const newExerciseTime = [...exerciseTime, tool];
         setExerciseTime(newExerciseTime);
@@ -21,6 +22,7 @@ const Home = () => {
     return (
         <div className='row g-5'>
             <div className='col-md-8 col-sm-12'>
+                {/* website header  */}
                 <Header></Header>
             <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2'>
             {

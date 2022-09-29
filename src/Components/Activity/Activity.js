@@ -28,6 +28,7 @@ const Activity = (props) => {
            </div>
            </section>
            <section className='mt-4 man-detail'>
+            {/* profile man details  */}
            <div className="d-flex justify-content-evenly">
             <div>
                 <h4>75 <span className='title'>kg</span></h4>
@@ -44,6 +45,7 @@ const Activity = (props) => {
            </div>
            </section>
            <section className='mt-4'>
+            {/* added break time  */}
             <h4>Add a Break</h4>
            <div className="d-flex justify-content-evenly p-2 man-detail">
 
